@@ -1,0 +1,266 @@
+* { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+p {
+    font-size: 15px;
+    line-height: 200%;
+}
+
+body {
+    padding: 3rem;
+}
+
+/* Header */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+    transition: 0.2s;
+}
+
+a:hover {
+    color: hsl(35, 77%, 62%);
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* Main */
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+#image-web-3 {
+    width: 100%;
+    height: 343px;
+    background-image: url(assets/images/image-web-3-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    order: 0;
+}
+
+#news-section {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: hsl(240, 100%, 5%);
+    order: 4;  
+}
+
+#news-section h2 {
+    color: hsl(35, 77%, 62%);
+    padding: 2rem 2rem 0 2rem;
+    font-size: 2.5rem;
+}
+
+.news-box {
+    border-bottom: 1px solid hsl(233, 8%, 79%);
+    padding: 2rem 0;
+    margin: 0 2rem;
+}
+
+.last {
+    border-bottom: none;
+}
+
+#news-section h3 {
+    color: hsl(36, 100%, 99%);
+    font-size: 1.5rem;
+}
+
+#news-section p {
+    margin-top: 1rem;
+    color: hsl(233, 8%, 79%);
+}
+
+#main-title {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    order: 1;
+}
+
+#main-title h1 {
+    font-size: 4rem;
+    padding: 1rem 2rem 0 0;
+}
+
+#main-description {
+    padding: 1rem 2rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: hsl(236, 13%, 42%);
+    order: 2;
+}
+
+#main-description p {
+    font-size: 1.1rem;
+}
+
+#read-more {
+    background-color: hsl(5, 85%, 63%);
+    width: 50%;
+    height: 3rem;
+    border: none;
+    color: hsl(36, 100%, 99%);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#read-more:hover {
+    background-color: hsl(240, 100%, 5%);
+}
+
+.top-news {
+    display: flex;
+    order: 5;
+}
+
+.top-news-img {
+    width: 30%;
+}
+
+.top-news-description {
+    padding: 0 2rem;
+}
+
+.top-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(233, 8%, 79%);
+}
+
+.top-news-description h4 {
+    font-weight: 800;
+    padding: 1rem 0;
+}
+
+.top-news p {
+    color: hsl(236, 13%, 42%);
+}
+
+/* Footer */
+.attribution { 
+    padding-top: 3rem;
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width:500px) {
+    body {
+        padding: 1rem;
+        overflow: auto;
+    }
+
+    .background.blur {
+        position: absolute;
+        background-color: hsla(0, 0%, 0%, 0.5);
+        width: 100%;
+        height: 500vh;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        z-index: 0;
+    }
+
+    .nav-bar {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        right: 1rem;
+        z-index: 3;
+        cursor: pointer;
+    }
+    
+    ul {
+        position: absolute;
+        flex-direction: column;
+        width: 75%;
+        height: 100vh;
+        right: 0;
+        top: 0;
+        padding-top: 7rem;
+        background-color: white;
+        padding-left: 1rem;
+        display: none;
+        z-index: 2;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    a {
+        color: black;
+    }
+
+    #image-web-3 {
+    background-image: url(assets/images/image-web-3-mobile.jpg);
+    }
+
+    #main-title h1 {
+        font-size: 2.5rem;
+        padding-right: 1rem;
+    }
+
+    #main-description {
+        padding: 0 0.5rem 0 0;
+    }
+
+    #main-description p {
+        font-size: 0.9rem;
+    }
+
+    #read-more {
+        margin: 2rem 0;
+    }
+
+    .top-news-description {
+        padding: 0 1rem;
+    }
+
+    #news-section {
+        margin-bottom: 3rem;
+    }
+
+}
